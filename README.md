@@ -7,4 +7,4 @@ $ npm i core.io-cli
 ```
 
 ## License
-® License MIT by goliatone
+® License MIT 2017 by goliatone
