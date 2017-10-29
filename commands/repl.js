@@ -1,6 +1,6 @@
 'use strict';
-const BaseCommand = require('waterline-to-json-schema/commands/base');
-const ChildProcess = require('waterline-to-json-schema/node_modules/child-process-promise');
+const BaseCommand = require('base-cli-commands').BaseCommand;
+const ChildProcess = require('base-cli-commands').ChildProcess;
 
 class ReplCommand extends BaseCommand {
 
