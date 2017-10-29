@@ -24,6 +24,8 @@
   "homepage": "https://github.com/goliatone/core.io-cli#readme",
   "dependencies": {
     "caporal": "^0.8.0",
+    "core.io-cli-local-env": "0.0.1",
+    "simple-project-generator": "^0.2.6",
     "update-notifier": "^2.3.0"
   },
   "devDependencies": {
