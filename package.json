@@ -25,6 +25,7 @@
   "dependencies": {
     "caporal": "^0.8.0",
     "core.io-cli-local-env": "*",
+    "core.io-view-generator": "^0.2.0",
     "simple-project-generator": "*",
     "update-notifier": "^2.3.0",
     "waterline-to-json-schema": "*"
