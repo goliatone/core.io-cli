@@ -25,7 +25,7 @@
   "dependencies": {
     "base-cli-commands": "*",
     "core.io-cli-local-env": "*",
-    "core.io-view-generator": "*",
+    "core.io-cli-view-generator": "*",
     "simple-project-generator": "*",
     "waterline-to-json-schema": "*"
   },
