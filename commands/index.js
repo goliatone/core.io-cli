@@ -3,7 +3,7 @@
 const Shuttle = require('core.io-cli-local-env/commands');
 const Generator = require('simple-project-generator/commands');
 const Schema = require('waterline-to-json-schema/commands');
-const Scaffold = require('core.io-cli-view-generator/commands');
+const Scaffold = require('core.io-view-generator/commands');
 
 const Run = require('./run');
 const Repl = require('./repl');
@@ -23,7 +23,7 @@ module.exports.attach = function $attach(app, namespace = false) {
     Install.attach(context);
 
     Run.attach(context);
-    
+
     Repl.attach(context);
 
     /**
@@ -35,5 +35,5 @@ module.exports.attach = function $attach(app, namespace = false) {
     Schema.attach(app, 'schema');
     Scaffold.attach(app, 'scaffold');
 
-    
+
 };
