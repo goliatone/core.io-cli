@@ -28,7 +28,7 @@
     "core.io-view-generator": "*",
     "noop-console": "*",
     "simple-project-generator": "*",
-    "waterline-to-json-schema": "^0.11.2"
+    "waterline-to-json-schema": "^0.12.0"
   },
   "devDependencies": {
     "bogota": "^2.0.4",
