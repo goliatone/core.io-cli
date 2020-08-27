@@ -24,11 +24,11 @@
   "homepage": "https://github.com/goliatone/core.io-cli#readme",
   "dependencies": {
     "base-cli-commands": "*",
-    "core.io-cli-local-env": "^0.3.2",
+    "core.io-cli-local-env": "*",
     "core.io-view-generator": "*",
     "noop-console": "*",
     "simple-project-generator": "*",
-    "waterline-to-json-schema": "^0.12.0"
+    "waterline-to-json-schema": "*"
   },
   "devDependencies": {
     "bogota": "^2.0.4",
