@@ -34,6 +34,4 @@ module.exports.attach = function $attach(app, namespace = false) {
     Generator.attach(app, 'generator');
     Schema.attach(app, 'schema');
     Scaffold.attach(app, 'scaffold');
-
-
 };
