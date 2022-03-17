@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 'use strict';
 
 const CliApp = require('base-cli-commands').CliApp;

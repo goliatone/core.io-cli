@@ -23,18 +23,18 @@
   },
   "homepage": "https://github.com/goliatone/core.io-cli#readme",
   "dependencies": {
-    "base-cli-commands": "*",
-    "core.io-cli-local-env": "*",
-    "core.io-view-generator": "*",
-    "noop-console": "*",
-    "simple-project-generator": "*",
-    "waterline-to-json-schema": "*"
+    "base-cli-commands": "^0.5.0",
+    "core.io-cli-local-env": "^0.7.0",
+    "core.io-view-generator": "^0.10.0",
+    "noop-console": "^0.9.0",
+    "simple-project-generator": "^0.13.0",
+    "waterline-to-json-schema": "^0.16.0"
   },
   "devDependencies": {
     "bogota": "^2.0.4",
     "jshint": "^2.9.5",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.2",
+    "sinon": "^13.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.1",
     "tape-catch": "^1.0.6",

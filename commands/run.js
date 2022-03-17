@@ -4,45 +4,48 @@ const ChildProcess = require('base-cli-commands').ChildProcess;
 
 class RunCommand extends BaseCommand {
 
-    execute(args){
+    execute(args) {
         const opts = makeArgsFromOptions(args.options, {
             'host': '--host',
             'port': '--port'
         });
 
-console.log(args.options.command)
+        console.log(args.options.command)
         return ChildProcess.spawn(args.options.command, [], {
             stdio: 'inherit'
         });
     }
 
-    static describe(prog, cmd){
+    static describe(prog, cmd) {
 
-        cmd.argument('[application]', 
-            'Application to run', 
-            /.*/, 
-            RunCommand.DEFAULTS.application
+        cmd.argument('[application]',
+            'Application to run', {
+                validator: /.*/,
+                default: RunCommand.DEFAULTS.application
+            }
         );
 
-        cmd.argument('[environment]', 
-            'Environment to run the application', 
-            /.*/, 
-            RunCommand.DEFAULTS.environment
+        cmd.argument('[environment]',
+            'Environment to run the application', {
+                validator: /.*/,
+                default: RunCommand.DEFAULTS.environment
+            }
         );
 
-        cmd.option('--command, -c <command>', 
-            'Command to run', 
-            prog.STRING, 
-            RunCommand.DEFAULTS.options.command
+        cmd.option('--command, -c <command>',
+            'Command to run', {
+                validator: prog.STRING,
+                default: RunCommand.DEFAULTS.options.command
+            }
         );
     }
 }
 
-function makeArgsFromOptions(options, keywords){
+function makeArgsFromOptions(options, keywords) {
     let flag, val;
     let out = [];
-    Object.keys(keywords).forEach((key)=>{
-        if(!options[key]) return;
+    Object.keys(keywords).forEach((key) => {
+        if (!options[key]) return;
         val = options[key];
         flag = keywords[key];
         out.push(flag);
