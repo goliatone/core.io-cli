@@ -24,9 +24,10 @@ class InstallCommand extends BaseCommand {
     static describe(prog, cmd) {
         cmd.argument(
             '[plugin]',
-            'Plugin to install',
-            /.*/,
-            InstallCommand.DEFAULTS.plugin
+            'Plugin to install', {
+                validator: /.*/,
+                default: InstallCommand.DEFAULTS.plugin
+            }
         );
     }
 }
