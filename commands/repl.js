@@ -4,7 +4,7 @@ const ChildProcess = require('base-cli-commands').ChildProcess;
 
 class ReplCommand extends BaseCommand {
 
-    execute(args){
+    execute(args) {
         const opts = makeArgsFromOptions(args.options, {
             'host': '--host',
             'port': '--port'
@@ -15,27 +15,29 @@ class ReplCommand extends BaseCommand {
         });
     }
 
-    static describe(prog, cmd){
+    static describe(prog, cmd) {
 
-        cmd.option('--port, -p <port>', 
-            'Port to connect', 
-            prog.INTEGER, 
-            ReplCommand.DEFAULTS.options.port
+        cmd.option('--port, -p <port>',
+            'Port to connect', {
+                validator: prog.INTEGER,
+                default: ReplCommand.DEFAULTS.options.port
+            }
         );
 
-        cmd.option('--host, -H <host>', 
-            'Host to connect', 
-            prog.STRING, 
-            ReplCommand.DEFAULTS.options.host
+        cmd.option('--host, -H <host>',
+            'Host to connect', {
+                validator: prog.STRING,
+                default: ReplCommand.DEFAULTS.options.host
+            }
         );
     }
 }
 
-function makeArgsFromOptions(options, keywords){
+function makeArgsFromOptions(options, keywords) {
     let flag, val;
     let out = [];
-    Object.keys(keywords).forEach((key)=>{
-        if(!options[key]) return;
+    Object.keys(keywords).forEach((key) => {
+        if (!options[key]) return;
         val = options[key];
         flag = keywords[key];
         out.push(flag);
